@@ -1,0 +1,5 @@
+archipelago
+peninsula
+continental
+latitude
+longitude

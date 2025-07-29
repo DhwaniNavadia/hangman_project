@@ -1,0 +1,5 @@
+platypus
+chameleon
+orangutan
+hedgehog
+armadillo

@@ -1,0 +1,5 @@
+moon
+star
+mars
+sun
+sky

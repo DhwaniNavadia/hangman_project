@@ -1,0 +1,6 @@
+lake
+river
+hill
+desert
+plain
+
