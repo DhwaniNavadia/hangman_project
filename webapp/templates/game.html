@@ -1,0 +1,104 @@
+<!-- templates/game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman - Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #3f51b5;
+    }
+
+    .word {
+      font-size: 2rem;
+      letter-spacing: 10px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .feedback {
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 12px;
+      margin: 20px auto;
+      border-radius: 8px;
+      width: 80%;
+      border: 1px solid #ffeeba;
+      font-weight: bold;
+    }
+
+    form input[type="text"] {
+      padding: 10px;
+      font-size: 1.2rem;
+      width: 60px;
+      text-align: center;
+    }
+
+    form button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    form button:hover {
+      background-color: #43a047;
+    }
+
+    .details {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Guess the Word!</h1>
+
+    <div class="details">
+      <p><strong>Theme:</strong> {{ theme.capitalize() }} | 
+         <strong>Difficulty:</strong> {{ difficulty.capitalize() }}</p>
+      <p><strong>Player Turn:</strong> {{ current_player }}</p>
+    </div>
+
+    {% if message %}
+    <div class="feedback">
+      <p>{{ message }}</p>
+    </div>
+    {% endif %}
+
+    <p class="word">{{ display_word }}</p>
+    <p><strong>Wrong Guesses:</strong> {{ wrong_guesses|length }} / {{ max_attempts }}</p>
+    <p><strong>Guessed Letters:</strong> {{ guessed_letters|join(", ") }}</p>
+
+    <form action="/guess" method="post">
+      <input type="text" name="guess" maxlength="1" required autofocus>
+      <button type="submit">Submit Guess</button>
+    </form>
+  </div>
+</body>
+</html>

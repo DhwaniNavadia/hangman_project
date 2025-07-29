@@ -1,0 +1,66 @@
+/* Light blue background with doodles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #d6f1ff url('https://www.transparenttextures.com/patterns/skulls.png');
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container styling */
+.main-wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form heading */
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+/* Form styling */
+.options-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.options-form label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.options-form select,
+.options-form input[type="text"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.options-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.options-form button:hover {
+  background-color: #2980b9;
+}

@@ -1,0 +1,24 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Over</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    {% if won %}
+      <h1>🎉 Congratulations!</h1>
+      <p>You guessed the word: <strong>{{ word }}</strong></p>
+    {% else %}
+      <h1>😢 Game Over!</h1>
+      <p>The word was: <strong>{{ word }}</strong></p>
+    {% endif %}
+    
+    <form action="/">
+      <button type="submit">Play Again</button>
+    </form>
+  </div>
+</body>
+</html>
