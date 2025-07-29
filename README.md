@@ -17,6 +17,19 @@ A fun and interactive multiplayer Hangman game built using **Flask (Python)**. T
 
 ---
 
+📌 To-Do (Upcoming Features)
+🧩 Word Hints Feature
+
+⏲️ Visual Countdown Timer
+
+🖥️ GUI Desktop Version (Tkinter or PyQt)
+
+🧠 AI-powered Word Selector
+
+📈 Game Analytics (win rate, average score)
+
+
+
 ## 🗂️ Project Structure
 
 hangman_project/
@@ -56,3 +69,6 @@ hangman_project/
 ```bash
 git clone https://github.com/your-username/hangman-project.git
 cd hangman-project
+
+````
+
