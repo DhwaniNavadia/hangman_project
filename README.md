@@ -1,28 +1,58 @@
-# 🧠 Themed Hangman Game (Python + Tkinter)
+# 🕹️ Hangman Web App
 
-This is a **GUI-based Hangman game** built with Python's `tkinter` library. It allows users to select a **theme** before the game begins, such as:
-- ⚙️ General
-- 🤖 AI / Machine Learning
-- 🏥 Medical
-- 🐾 Animals
-- 🎬 Movies
-- 🌍 Geography
-
-The game **loads words dynamically from text files**, making it easy to add new themes without changing the code.
+A fun and interactive multiplayer Hangman game built using **Flask (Python)**. The game supports difficulty levels, themed word lists, a timer, a persistent leaderboard, and both 1-player and 2-player modes — all with a clean UI!
 
 ---
 
-## 🚀 Features
+## 🌟 Features
 
-- 🎨 GUI interface with user-friendly design
-- 🎯 Theme selection before the game starts
-- 📂 Loads words from `.txt` files under the `word_lists/` folder
-- 🔄 Restart game with a button
-- 🔠 Tracks guessed letters and remaining attempts
-- ❌ Prevents repeated and invalid inputs
-- 🛠 Easily extensible: just add a new `.txt` file for a new theme!
+- 🎯 Difficulty Levels: Easy, Medium, Hard
+- 🧠 Themed Word Lists: Fruits, Animals, Countries, AI/ML, etc.
+- 👥 1-Player and 2-Player Modes
+- ⏱️ Difficulty-Based Timer
+- 🎨 Styled Interface with Light Blue Background and Doodles
+- 💾 Persistent Leaderboard (`leaderboard.txt`)
+- 📊 Scoreboard Display After Each Game
+- 🔄 Replay Option
 
 ---
 
 ## 🗂️ Project Structure
 
+hangman_project/
+├── app.py
+├── leaderboard.txt
+├── static/
+│ └── style.css
+├── templates/
+│ ├── home.html
+│ └── game.html
+├── easy/
+│ ├── fruits.txt
+│ └── animals.txt
+├── medium/
+│ ├── sports.txt
+│ └── countries.txt
+├── hard/
+│ ├── ai_ml.txt
+│ └── diseases.txt
+└── README.md
+
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- Flask
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/hangman-project.git
+cd hangman-project
